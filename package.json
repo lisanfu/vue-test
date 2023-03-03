@@ -1,0 +1,19 @@
+{
+  "name": "vue-test",
+  "version": "1.0.0",
+  "description": "从零从零开发一个项目的流程",
+  "main": "main.js",
+  "repository": "git@github.com:lisanfu/vue-test.git",
+  "author": "lisanfu <874359874@qq.com>",
+  "license": "MIT",
+  "private": true,
+	"scripts": {
+		"lint": "npx eslint --ext .js,.jsx,.vue src",
+		"lint:fix": "npx eslint --fix --ext .js,.jsx,.vue src"
+	},
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "prettier": "^2.8.4"
+  },
+  "dependencies": {}
+}
