@@ -8,15 +8,22 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-		"build": "webpack",
+    "build": "webpack",
     "lint": "npx eslint --ext .js,.jsx,.vue src",
-    "lint:fix": "npx eslint --fix --ext .js,.jsx,.vue src"
+    "lint:fix": "npx eslint --fix --ext .js,.jsx,.vue src",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "eslint": "^8.35.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": ">=7",
+    "lint-staged": ">=10",
     "prettier": "^2.8.4",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "lint-staged": {
+    "*.{js,jsx,vue}": "eslint --cache --fix"
+  }
 }
