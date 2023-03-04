@@ -12,7 +12,8 @@
     "lint": "npx eslint --ext .js,.jsx,.vue src",
     "lint:fix": "npx eslint --fix --ext .js,.jsx,.vue src",
     "prepare": "husky install",
-		"commit": "git-cz"
+    "commit": "git-cz",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
@@ -24,6 +25,7 @@
     "husky": ">=7",
     "lint-staged": ">=10",
     "prettier": "^2.8.4",
+    "standard-version": "^9.5.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },
