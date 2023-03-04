@@ -1,19 +1,40 @@
 {
   "name": "vue-test",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "从零从零开发一个项目的流程",
   "main": "main.js",
   "repository": "git@github.com:lisanfu/vue-test.git",
   "author": "lisanfu <874359874@qq.com>",
   "license": "MIT",
   "private": true,
-	"scripts": {
-		"lint": "npx eslint --ext .js,.jsx,.vue src",
-		"lint:fix": "npx eslint --fix --ext .js,.jsx,.vue src"
-	},
-  "devDependencies": {
-    "eslint": "^8.35.0",
-    "prettier": "^2.8.4"
+  "scripts": {
+    "build": "webpack",
+    "lint": "npx eslint --ext .js,.jsx,.vue src",
+    "lint:fix": "npx eslint --fix --ext .js,.jsx,.vue src",
+    "prepare": "husky install",
+    "commit": "git-cz",
+    "release": "standard-version"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.35.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": ">=7",
+    "lint-staged": ">=10",
+    "prettier": "^2.8.4",
+    "standard-version": "^9.5.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": "eslint --cache --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
